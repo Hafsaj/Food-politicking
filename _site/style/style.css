@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin:0;
   padding:0;
-  border: 1px solid
 }
 html{
   font-size: 12px;
@@ -12,26 +11,35 @@ img{
 }
 h1, h2, h3, h4, h5, h6, a{
   font-family: 'Oswald', sans-serif;
+  font-variant-caps: all-small-caps;
   text-transform: capitalize;
   font-weight: bold;
   text-decoration: none;
   color:#4F7177;
+  letter-spacing: 1.265px;
 }
 h1{
-  font-size: 3rem;
+  font-size: 4rem;
+  text-align: center;
 }
 h2{
-  font-size: 2rem;
+  font-size: 3rem;
+  text-align: center;
 }
 p{
   font-family: 'Arimo', sans-serif;
   color:#4F7177;
   font-size: 1rem;
+  text-align: justify;
+  word-wrap: break-word;
+  letter-spacing: 1pxs;
 }
 .site_heading,
 footer{
   background-color: #E9E7E8;
   padding:1%;
+  box-shadow: 0 0 5px #000000;
+  height: 20vh;
 }
 .homepage_image_grid,
 .image_slider{
@@ -42,11 +50,35 @@ footer{
   padding: 7% 0;
 }
 #post_grid,
-#recent_posts{
+#recent_posts,
+.recent_post_image{
   padding:2%;
 }
-.important_information{
+.important_information,
+nav,
+{
   display:flex;
   align-items: center;
   text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+.large_image_grid{
+  width:75vh;
+}
+.mini_grid{
+  display:flex;
+  align-items: center;
+  text-align: left;
+  display: flex;
+  justify-content: space-around;
+}
+.annoying_grid{
+  margin:2% 0;
+}
+.smaller_grid_image{
+  width:25vh;
+}
+.default{
+  width: 15vh;
 }
