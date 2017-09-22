@@ -1,0 +1,86 @@
+---
+layout: default
+---
+<section id="post_grid">
+<h1>
+{{page.title}}
+</h1>
+<!---super annoying grid--->
+<div class="grid-spaceAround">
+  <div class="col-2">
+    {% for post in site.posts offset:1 limit:1 %}
+    <div>
+    <img src="{{post.source}}"/>
+    <h3>{{post.post_title}}</h3>
+    <p>{{post.post_description}}</p>
+    </div>
+    {% endfor %}
+    {% for post in site.posts offset:4 limit:1 %}
+    <div>
+      <h3>{{post.post_title}}</h3>
+      <p>{{post.post_description}}</p>
+    </div>
+    {% endfor %}
+    {% for post in site.posts offset:6 limit:1 %}
+    <div>
+      <h3>{{post.post_title}}</h3>
+      <p>{{post.post_description}}</p>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="col-6">
+    {% for post in site.posts limit:1 %}
+    <div>
+    <img src="{{post.source}}"/>
+    <h3>{{post.post_title}}</h3>
+    <p>{{post.post_description}}</p>
+    </div>
+    {% endfor %}
+    {% for post in site.posts offset:3 limit:1 %}
+    <div>
+      <img src="{{post.source}}"/>
+      <h3>{{post.post_title}}</h3>
+      <p>{{post.post_description}}</p>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="col-2">
+    {% for post in site.posts offset:2 limit:1 %}
+    <div>
+    <img src="{{post.source}}"/>
+    <h3>{{post.post_title}}</h3>
+    <p>{{post.post_description}}</p>
+    </div>
+    {% endfor %}
+    {% for post in site.posts offset:5 limit:1 %}
+    <div>
+      <h3>{{post.post_title}}</h3>
+      <p>{{post.post_description}}</p>
+    </div>
+    {% endfor %}
+    {% for post in site.posts offset:7 limit:1 %}
+    <div>
+      <h3>{{post.post_title}}</h3>
+      <p>{{post.post_description}}</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+</section>
+<!---recent posts section starts - content needs to pull in dynamically--->
+<section id="recent_posts">
+    {% for post in site.posts offset:8 %}
+    <div class="grid-spaceAround">
+      <div class="col-2">
+        <img src="{{post.source}}" />
+      </div>
+      <div class="col-8">
+        <h3>{{post.post_title}}</h3>
+        <p>{{post.post_description}}</p>
+        <p>{{post.date}}</p>
+      </div>
+      </div>
+    {% endfor %}
+
+</section>
+<!---recent posts section starts--->

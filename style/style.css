@@ -1,0 +1,52 @@
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  border: 1px solid
+}
+html{
+  font-size: 12px;
+}
+img{
+  max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6, a{
+  font-family: 'Oswald', sans-serif;
+  text-transform: capitalize;
+  font-weight: bold;
+  text-decoration: none;
+  color:#4F7177;
+}
+h1{
+  font-size: 3rem;
+}
+h2{
+  font-size: 2rem;
+}
+p{
+  font-family: 'Arimo', sans-serif;
+  color:#4F7177;
+  font-size: 1rem;
+}
+.site_heading,
+footer{
+  background-color: #E9E7E8;
+  padding:1%;
+}
+.homepage_image_grid,
+.image_slider{
+  margin:1px;
+  min-height:200px;
+  background-size: cover;
+  background-position: center;
+  padding: 7% 0;
+}
+#post_grid,
+#recent_posts{
+  padding:2%;
+}
+.important_information{
+  display:flex;
+  align-items: center;
+  text-align: center;
+}
