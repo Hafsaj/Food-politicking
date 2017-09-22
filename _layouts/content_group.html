@@ -75,10 +75,10 @@ layout: default
 <section id="recent_posts">
     {% for post in site.posts offset:8 %}
     <div class="grid-spaceAround">
-      <div class="col-2">
+      <div class="col-3">
         <img src="{{post.source}}" class="recent_post_image" />
       </div>
-      <div class="col-8">
+      <div class="col-9">
         <h3>{{post.post_title}}</h3>
         <p>{{post.post_description}}</p>
         <p>{{post.date}}</p>

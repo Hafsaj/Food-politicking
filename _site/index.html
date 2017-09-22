@@ -3,6 +3,7 @@
 <head>
 <link rel="stylesheet" href="style/normalize.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.4.1/gridlex.min.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/flexslider.min.css">
 <link href="https://fonts.googleapis.com/css?family=Arimo|Oswald" rel="stylesheet">
 <link rel="stylesheet" href="/style/style.css">
 <script src="https://use.fontawesome.com/d305d8ae15.js"></script>
@@ -23,29 +24,35 @@
       <a href="/content_group_Spain.html">Spain</a>
       <a href="/content_group_Environment.html">Environment</a>
     </nav>
+    <a href="#home" title="Home" class="toggle-mobile-menu">
+      <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+    </a>
   </header>
-<header>
 <h1>
   Latest posts
 </h1>
-<!---image carousel starts--->
-<div class="container">
-  <div>
-    
-      <h2 class="image_slider" style="background-image:url('/images/black_lives_matter_protest_US.jpg')">black lives matter protest US
-      </h2>
+<section id="hero">
+  <div class="flexslider">
+      <ul class="slides">
+        
+        <li>
+          <h3>black lives matter protest US</h3>
+          <img src="/images/black_lives_matter_protest_US.jpg" class="add-object-fit"/>
+        </li>
+        
+        <li>
+          <h3>who would jesus deport</h3>
+          <img src="/images/who_would_jesus_deport.jpg" class="add-object-fit"/>
+        </li>
+        
+        <li>
+          <h3>pussy power hat protest</h3>
+          <img src="/images/pussy_power_hat_protest.jpg" class="add-object-fit"/>
+        </li>
+        
+      </ul><!-- .slides -->
   </div>
-  
-      <h2 class="image_slider" style="background-image:url('/images/who_would_jesus_deport.jpg')">who would jesus deport
-      </h2>
-  </div>
-  
-      <h2 class="image_slider" style="background-image:url('/images/pussy_power_hat_protest.jpg')">pussy power hat protest
-      </h2>
-  </div>
-  
-</div>
-</header>
+</section>
 <!---image carousel ends--->
 <!---6 image grid starts--->
 <div class="grid-noGutter-noBottom-center">
@@ -79,7 +86,7 @@
 
 
 <footer>
-  <div class="grid-spaceAround">
+  <div class="grid-spaceAround-middle-noBottom footer_grid">
     <div class="col-2">
       <img src="images/Andrew_schein.jpg" alt="Author image" class="default">
     </div>
@@ -100,5 +107,20 @@
   </div>
 </nav>
 </footer>
+<!---javascript starts-->
+<nav id="mobile_menu" class="grid-middle">
+  <a href="#home" class="toggle-mobile-menu col-12">
+    <i class="fa fa-times" aria-hidden="true"></i>
+  </a>
+  <a href="/content_group_Food.html" class="col-12">Food</a>
+  <a href="/content_group_UK.html" class="col-12">UK</a>
+  <a href="/content_group_US.html" class="col-12">US</a>
+  <a href="/content_group_Spain.html" class="col-12">Spain</a>
+  <a href="/content_group_Environment.html" class="col-12">Environment</a>
+</nav>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.0/jquery.flexslider-min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+<!---javascript ends-->
 </body>
 </html>

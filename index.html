@@ -21,20 +21,21 @@ image_grid:
   - source: /images/political_graffiti_sarcasm.jpg
     post_title: political graffiti sarcasm
 ---
-<header>
 <h1>
   Latest posts
 </h1>
-<!---image carousel starts--->
-<div class="container">
-  <div>
-    {% for image in page.image %}
-      <h2 class="image_slider" style="background-image:url('{{image.source}}')">{{image.post_title}}
-      </h2>
+<section id="hero">
+  <div class="flexslider">
+      <ul class="slides">
+        {% for image in page.image %}
+        <li>
+          <h3>{{image.post_title}}</h3>
+          <img src="{{image.source}}" class="add-object-fit"/>
+        </li>
+        {% endfor %}
+      </ul><!-- .slides -->
   </div>
-  {% endfor %}
-</div>
-</header>
+</section>
 <!---image carousel ends--->
 <!---6 image grid starts--->
 <div class="grid-noGutter-noBottom-center">
