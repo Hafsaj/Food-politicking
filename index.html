@@ -1,5 +1,6 @@
 ---
 layout: default
+post: /posts
 image:
   - source: /images/black_lives_matter_protest_US.jpg
     post_title: black lives matter protest US
@@ -21,27 +22,28 @@ image_grid:
   - source: /images/political_graffiti_sarcasm.jpg
     post_title: political graffiti sarcasm
 ---
+<!---slider on homepage--->
 <h1>
   Latest posts
 </h1>
 <section id="hero">
   <div class="flexslider">
       <ul class="slides">
-        {% for image in page.image %}
+        {% for post in site.posts limit:3 %}
         <li>
-          <h3>{{image.post_title}}</h3>
-          <img src="{{image.source}}" class="add-object-fit"/>
+          <h2>{{post.post_title}}</h2>
+          <a href="{{post.url}}"><img src="{{post.source}}" class="add-object-fit"/></a>
         </li>
         {% endfor %}
       </ul><!-- .slides -->
   </div>
 </section>
-<!---image carousel ends--->
+<!---slider on homepage ends--->
 <!---6 image grid starts--->
-<div class="grid-noGutter-noBottom-center">
-  {% for image_grid in page.image_grid %}
-  <div class="col-3 homepage_image_grid" style="background-image:url('{{image_grid.source}}')">
-    <h2>{{image_grid.post_title}}</h2>
+<div class="grid-noGutter-noBottom-center-equalHeight image_grid">
+  {% for post in site.posts offset:3 limit:6 %}
+  <div class="col-4_sm-5.grid-center-middle homepage_image_grid" style="background-image:url('{{post.source}}')">
+    <h2 class="col-12 grid_post_title"><a href="{{post.url}}" class="grid_link">{{post.post_title}}</a></h2>
   </div>
   {% endfor %}
 </div>

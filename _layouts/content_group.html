@@ -6,85 +6,91 @@ layout: default
 {{page.title}}
 </h1>
 <!---super annoying grid--->
-<div class="grid-spaceAround">
-  <div class="col-2">
-    {% for post in site.posts offset:1 limit:1 %}
-    <div class="annoying_grid">
-    <img src="{{post.source}}"/>
-    <h3>{{post.post_title}}</h3>
-    <p>{{post.post_description}}</p>
+<div class="yellow-border-wrapper">
+  <span class="yellow-border"></span>
+  <div class="grid-spaceAround">
+    <div class="col-3_sm-12 order-2">
+      {% for post in site.posts offset:1 limit:1 %}
+      <div class="annoying_grid">
+      <a href="{{post.url}}"><img src="{{post.source}}"/></a>
+        <a href="{{post.url}}"><h3>{{post.post_title}}</h3></a>
+        <p>{{post.post_description}}</p>
+      </div>
+      {% endfor %}
+      {% for post in site.posts offset:4 limit:1 %}
+      <div class="annoying_grid">
+        <a href="{{post.url}}"><h3>{{post.post_title}}</h3></a>
+        <p>{{post.post_description}}</p>
+      </div>
+      {% endfor %}
+      {% for post in site.posts offset:6 limit:1 %}
+      <div class="annoying_grid">
+        <a href="{{post.url}}"><h3>{{post.post_title}}</h3></a>
+        <p>{{post.post_description}}</p>
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
-    {% for post in site.posts offset:4 limit:1 %}
-    <div class="annoying_grid">
-      <h3>{{post.post_title}}</h3>
+    <div class="col-5_sm-12 order-1">
+      {% for post in site.posts limit:1 %}
+      <div class="annoying_grid">
+        <a href="{{post.url}}"><img src="{{post.source}}" class="large_image_grid"/></a>
+        <a href="{{post.url}}"><h3>{{post.post_title}}</h3></a>
+        <p>{{post.post_description}}</p>
+      </div>
+      {% endfor %}
+      {% for post in site.posts offset:3 limit:1 %}
+      <div class="mini_grid.grid-spaceBetween-middle">
+      <div class="col-7_sm-9">
+        <a href="{{post.url}}"><h3>{{post.post_title}}</h3></a>
+        <p>{{post.post_description}}</p>
+      </div>
+      <div class="col-3_sm-3">
+      <img src="{{post.source}}" class="smaller_grid_image"/>
+      </div>
+      {% endfor %}
+    </div>
+    </div>
+    <div class="col-3_sm-12 order-3">
+      {% for post in site.posts offset:2 limit:1 %}
+      <div class="annoying_grid">
+      <a href="{{post.url}}"><img src="{{post.source}}"/></a>
+      <a href="{{post.url}}"><h3>{{post.post_title}}</h3></a>
       <p>{{post.post_description}}</p>
+      </div>
+      {% endfor %}
+      {% for post in site.posts offset:5 limit:1 %}
+      <div class="annoying_grid">
+        <a href="{{post.url}}"><h3>{{post.post_title}}</h3></a>
+        <p>{{post.post_description}}</p>
+      </div>
+      {% endfor %}
+      {% for post in site.posts offset:7 limit:1 %}
+      <div class="annoying_grid">
+        <a href="{{post.url}}"><h3>{{post.post_title}}</h3></a>
+        <p>{{post.post_description}}</p>
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
-    {% for post in site.posts offset:6 limit:1 %}
-    <div class="annoying_grid">
-      <h3>{{post.post_title}}</h3>
-      <p>{{post.post_description}}</p>
-    </div>
-    {% endfor %}
   </div>
-  <div class="col-6">
-    {% for post in site.posts limit:1 %}
-    <div class="annoying_grid">
-    <img src="{{post.source}}" class="large_image_grid"/>
-    <h3>{{post.post_title}}</h3>
-    <p>{{post.post_description}}</p>
-    </div>
-    {% endfor %}
-    {% for post in site.posts offset:3 limit:1 %}
-    <div class="mini_grid.grid-spaceBetween-middle">
-    <div class="col-7">
-      <h3>{{post.post_title}}</h3>
-      <p>{{post.post_description}}</p>
-    </div>
-    <div class="col-3">
-    <img src="{{post.source}}" class="smaller_grid_image"/>
-    </div>
-    {% endfor %}
-  </div>
-  </div>
-  <div class="col-2">
-    {% for post in site.posts offset:2 limit:1 %}
-    <div class="annoying_grid">
-    <img src="{{post.source}}"/>
-    <h3>{{post.post_title}}</h3>
-    <p>{{post.post_description}}</p>
-    </div>
-    {% endfor %}
-    {% for post in site.posts offset:5 limit:1 %}
-    <div class="annoying_grid">
-      <h3>{{post.post_title}}</h3>
-      <p>{{post.post_description}}</p>
-    </div>
-    {% endfor %}
-    {% for post in site.posts offset:7 limit:1 %}
-    <div class="annoying_grid">
-      <h3>{{post.post_title}}</h3>
-      <p>{{post.post_description}}</p>
-    </div>
-    {% endfor %}
-  </div>
-</div>
+</div><!-- .yellow-border-wrapper -->
 </section>
 <!---recent posts section starts - content needs to pull in dynamically--->
 <section id="recent_posts">
+  <h2 class="recent_posts_title">Recent posts</h2>
+  <div class="yellow-border-wrapper">
+    <span class="yellow-border-mini"></span>
     {% for post in site.posts offset:8 %}
     <div class="grid-spaceAround">
-      <div class="col-3">
-        <img src="{{post.source}}" class="recent_post_image" />
+      <div class="col-3_md-1">
+        <a href="{{post.url}}"><img src="{{post.source}}" class="recent_post_image" /></a>
       </div>
-      <div class="col-9">
-        <h3>{{post.post_title}}</h3>
+      <div class="col-9_md-7">
+        <a href="{{post.url}}"><h3>{{post.post_title}}</h3></a>
         <p>{{post.post_description}}</p>
-        <p>{{post.date}}</p>
+        <p>{{post.date | date_to_long_string}}</p>
       </div>
       </div>
     {% endfor %}
-
+</div> <!---yellow-border-wrapper ends--->
 </section>
 <!---recent posts section starts--->

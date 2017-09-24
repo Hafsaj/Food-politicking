@@ -29,5 +29,8 @@ $(document).ready(function(){
       directionNav: false
 
     });
+    $("#sticky_nav").sticky({
+   topSpacing: 0
+ });
 
 });

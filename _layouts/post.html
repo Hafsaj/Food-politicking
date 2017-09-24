@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<!---sticky element starts--->
+
+<nav id="sticky_nav">
+    <a href="/index.html"><img src="/images/Food+Politicking_transparent.png" alt="Logo" class="default"></a>
+    <a href="https://www.facebook.com/" class="social_button"><i class="fa fa-facebook-official social_button" aria-hidden="true"></i> Share</a>
+    <a href="https://twitter.com/login?lang=en-gb" class="social_button"><i class="fa fa-twitter-square social_button" aria-hidden="true"></i> Share</a>
+</nav>
+
+<!---sticky element ends--->
+
+<section class="main_post">
+<h1>{{page.post_title}}</h1>
+<p>{{page.date | date_to_long_string}}</p>
+<img src="{{page.source}}" class="post_image"/> <!---image-->
+
+
+{{content}}
+
+</section>
+
+<section class="suggested_content">
+  <h2>Next up</h2>
+{% for post in site.posts limit:3 %}
+<a href="{{post.url}}">
+  <h3 class="post_title">{{post.post_title}}</h3>
+<p>{{post.date | date_to_long_string}}</p>
+</a>
+{% endfor %}
+</section>
