@@ -1,12 +1,12 @@
 ---
 layout: post
 source: /images/who_would_jesus_deport.jpg
-post_title: Spanish politics: it's really not that complicated
+post_title: Spanish politics it's really not that complicated
 post_description: So remember when I said I was going to keep bragging about how I was right about Spanish politics? I haven't changed my mind about that.
 categories:
   - Spain
   - Spanish politics
-  - political betting 
+  - political betting
 ---
 
 So remember when <a href="https://foodandpoliticking.wordpress.com/2016/01/21/its-in-various-spanish-party-leaders-interest-to-pretend-that-spanish-politics-are-in-disarray-even-though-the-path-forward-psoe-podemos-regional-parties-is-so-obvious/">I said</a> I was going to keep bragging about how I was right about Spanish politics? I haven't changed my mind about that.
