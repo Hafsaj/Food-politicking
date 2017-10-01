@@ -1,7 +1,7 @@
 ---
 layout: post
 source: /images/stack_of_newspapers_UK_smaller.jpg
-post_title: Green Revolution world saving solution, or driver of ever more pollution
+post_title: Green Revolution &#58 world saving solution, or driver of ever more pollution
 post_description: The Green Revolution won its creator a peace prize; But its legacy is a mixed bag of lows along with the highs
 categories:
   - UK
